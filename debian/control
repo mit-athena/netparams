@@ -1,0 +1,14 @@
+Source: debathena-netparams
+Section: debathena/net
+Priority: optional
+Maintainer: Jonathan Reed <jdreed@mit.edu>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.4
+
+Package: debathena-netparams
+Architecture: all
+Depends: ${misc:Depends}
+Description: Generate network parameters from IP address
+ This package generats network parameters (e.g. netmask, gateway) from
+ an IP address, given a file which loosely describes the network
+ layout.  This is probably only useful to sites with a /8.

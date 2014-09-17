@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+%:
+	dh $@
+
+# We need to build explcitly with gzip, because in an include_command,
+# udpkg can only uncompress gzip, not xzip.  Because d-i.
+override_dh_builddeb:
+	dh_builddeb -- -Zgzip
